@@ -50,7 +50,7 @@ class Pila{
             temporal = temporal.abajo;
         }
 
-        var codigoDot = `digraph G {\nlabel = \"Pila 1\" \n rankdir=LR;nodo1 [label="` + nodos +` $" shape = "record" ];\n}`
+        var codigoDot = `digraph G {\nlabel = \"Pila\" \n rankdir=LR;nodo1 [label="` + nodos +` $" shape = "record" ];\n}`
         console.log("\n");
         console.log("Codigo Dot Generado: \n"+codigoDot);
         d3.select("#"+lienzo)
