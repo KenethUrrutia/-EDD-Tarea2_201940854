@@ -13,7 +13,7 @@ class Pila{
         this.punta = null;
     }
 
-    add(numero){
+    push(numero){
         var temporal = new Nodo(numero);
 
         temporal.abajo = this.punta;
@@ -24,7 +24,7 @@ class Pila{
 
     }
 
-    remove(){
+    pop(){
         this.punta = this.punta.abajo;
     }
 
@@ -37,7 +37,7 @@ class Pila{
 
     }
 
-    top(){
+    peek(){
         return this.punta.numero
 
     }
@@ -69,15 +69,15 @@ class Pila{
 var pila1 = new Pila();
 var pila2 = new Pila();
 
-pila1.add(2);
-pila1.add(0);
-pila1.add(1);
-pila1.add(9);
-pila1.add(4);
-pila1.add(0);
-pila1.add(8);
-pila1.add(5);
-pila1.add(4);
+pila1.push(2);
+pila1.push(0);
+pila1.push(1);
+pila1.push(9);
+pila1.push(4);
+pila1.push(0);
+pila1.push(8);
+pila1.push(5);
+pila1.push(4);
 
 
 
@@ -89,15 +89,15 @@ pila2.graficar("lienzo2");
 
 
 function IzqToDer() {
-    pila2.add(pila1.top())
-    pila1.remove();
+    pila2.push(pila1.peek())
+    pila1.pop();
     pila1.graficar("lienzo1");
     pila2.graficar("lienzo2");
 }
 
 function DerToIzq() {
-    pila1.add(pila2.top())
-    pila2.remove();
+    pila1.push(pila2.peek())
+    pila2.pop();
     pila2.graficar("lienzo2");
     pila1.graficar("lienzo1");
 }
